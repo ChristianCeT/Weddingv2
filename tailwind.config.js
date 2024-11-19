@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        nametitle: ["Libre Caslon Text", "italic", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

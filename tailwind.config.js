@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         nametitle: ["Libre Caslon Text", "italic", "serif"],
+        dancingScript: ["Dancing Script"],
       },
       colors: {
         background: "var(--background)",

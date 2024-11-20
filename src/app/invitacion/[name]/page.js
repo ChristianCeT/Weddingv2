@@ -34,7 +34,7 @@ const InvitacionPage = async ({ params }) => {
   return (
     <div>
       <section>
-        <div className="relative h-screen overflow-hidden ">
+        <div className="relative h-screen overflow-hidden">
           <Image
             src={"/images/fondo.webp"}
             fill
@@ -56,7 +56,7 @@ const InvitacionPage = async ({ params }) => {
             alt="stain-image"
           ></Image>
           <Image
-            className="absolute right-0 top-[-80] rotate-[-92deg] z-20"
+            className="absolute right-0 top-[-80px] rotate-[-92deg] z-20"
             src={"/images/stain.png"}
             width={400}
             height={300}
@@ -67,7 +67,6 @@ const InvitacionPage = async ({ params }) => {
           justify-center items-center absolute px-8"
           >
             <Image
-              className=""
               src={"/images/rings.png"}
               width={100}
               height={100}
@@ -100,22 +99,23 @@ const InvitacionPage = async ({ params }) => {
               <CountDownComponent />
             </div>
           </div>
+
           <Image
-            className="absolute right-0 bottom-[-40] rotate-[-40deg] z-20"
+            className="absolute right-0 bottom-[-40px] rotate-[-40deg] z-20"
             src={"/images/pink-flowers2.png"}
             width={200}
             height={300}
-            alt="stain-image"
+            alt="pink-flowers2"
           ></Image>
           <Image
-            className="absolute right-0 bottom-[-180] rotate-12 z-20"
+            className="absolute right-0 bottom-[-160px] rotate-12 z-20"
             src={"/images/stain.png"}
             width={400}
             height={300}
             alt="stain-image"
           ></Image>
           <Image
-            className="absolute left-0 bottom-[-160] rotate-[120deg] z-20"
+            className="absolute left-0 bottom-[-160px] rotate-[120deg] z-20"
             src={"/images/stain.png"}
             width={400}
             height={300}

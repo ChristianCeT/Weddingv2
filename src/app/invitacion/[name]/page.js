@@ -2,7 +2,8 @@ import { unstable_cache } from "next/cache";
 import { createClient } from "@supabase/supabase-js";
 import CountDownComponent from "../../components/CountDown";
 import Image from "next/image";
-import { GalleryImage } from "@/app/components/GalleryImage";
+import GalleryImageMine from "../../components/GalleryImageMine";
+import { DateHour } from "@/app/components/DateHour";
 
 const getGuesses = unstable_cache(
   async () => {
@@ -72,8 +73,11 @@ const InvitacionPage = async ({ params }) => {
               height={100}
               alt="ring-image"
             ></Image>
-            <h1 className="pb-10 text-[2.8rem] font-dancingScript font-bold">
-              Estás invitada: {guess.name}
+            <h1 className="text-[2.3rem] font-dancingScript font-bold">
+              Para: {guess.name}
+            </h1>
+            <h1 className="text-[2.8rem] font-dancingScript font-bold">
+              ¡Estás invitado a mi boda!
             </h1>
 
             <div className="relative w-[400px] flex justify-center">
@@ -96,6 +100,7 @@ const InvitacionPage = async ({ params }) => {
               <p className="text-4xl font-nametitle italic font-semibold">
                 Tedoro & Nicida
               </p>
+              <DateHour></DateHour>
               <CountDownComponent />
             </div>
           </div>
@@ -132,9 +137,8 @@ const InvitacionPage = async ({ params }) => {
             alt="fondo-image"
             priority
           ></Image>
-          <div className="absolute">
-            <GalleryImage></GalleryImage>
-          </div>
+
+          <GalleryImageMine></GalleryImageMine>
         </div>
       </section>
     </div>

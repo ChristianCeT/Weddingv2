@@ -16,9 +16,15 @@ const CountDownComponent = () => {
       return <span>Event Started</span>;
     } else {
       return (
-        <span className="text-2xl ">
-          {days} días {hours} horas {minutes} minutos {seconds} segundos
-        </span>
+        <div>
+          <h2 className="text-2xl font-nametitle italic font-semibold ">
+            Falta
+          </h2>
+
+          <span className="text-2xl font-dancingScript font-semibold">
+            {days} días {hours} horas {minutes} minutos {seconds} segundos
+          </span>
+        </div>
       );
     }
   };

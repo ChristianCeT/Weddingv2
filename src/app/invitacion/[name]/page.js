@@ -42,31 +42,37 @@ const InvitacionPage = async ({ params }) => {
             alt="fondo-image"
             priority
           ></Image>
-          <Image
-            className="absolute left-[-96px] rotate-12"
-            src={"/images/pink-flower.png"}
-            width={300}
-            height={300}
-            alt="pink-flower-image"
-          ></Image>
-          <Image
-            className="absolute left-[-96px] rotate-12"
-            src={"/images/stain.png"}
-            width={400}
-            height={300}
-            alt="stain-image"
-          ></Image>
-          <Image
-            className="absolute right-0 top-[-80px] rotate-[-92deg] z-20"
-            src={"/images/stain.png"}
-            width={400}
-            height={300}
-            alt="stain-image"
-          ></Image>
           <div
-            className="h-full w-full flex flex-col 
-          justify-center items-center absolute px-8"
+            className="absolute lg:left-[-96px] left-[-60px] rotate-12
+          h-[200px] w-[200px] lg:h-[300px] lg:w-[300px]
+          "
           >
+            <Image
+              src={"/images/pink-flower.png"}
+              fill
+              alt="pink-flower-image"
+            ></Image>
+          </div>
+
+          <div className="absolute md:left-[-96px] md:block hidden rotate-12">
+            <Image
+              src={"/images/stain.png"}
+              width={400}
+              height={300}
+              alt="stain-image"
+            ></Image>
+          </div>
+
+          <div className="absolute md:right-0 right-[-180px] top-[-80px] rotate-[-92deg] z-20">
+            <Image
+              src={"/images/stain.png"}
+              width={400}
+              height={300}
+              alt="stain-image"
+            ></Image>
+          </div>
+
+          <div className="h-full w-full flex flex-col justify-center items-center absolute px-8">
             <Image
               src={"/images/rings.png"}
               width={100}
@@ -76,24 +82,25 @@ const InvitacionPage = async ({ params }) => {
             <h1 className="text-[2.3rem] font-dancingScript font-bold">
               Para: {guess.name}
             </h1>
-            <h1 className="text-[2.8rem] font-dancingScript font-bold">
+            <h1 className="text-[2.8rem] font-dancingScript font-bold text-center">
               ¡Estás invitado a mi boda!
             </h1>
 
             <div className="relative w-[400px] flex justify-center">
-              <Image
-                className="relative z-20"
-                src={"/images/couple.png"}
-                width={280}
-                height={280}
-                alt="couple-image"
-              ></Image>
-              <Image
-                className="opacity-[0.16] absolute z-10"
-                src={"/images/fondo-circle.png"}
-                fill
-                alt="circle-image"
-              ></Image>
+              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[300px] h-[300px]">
+                <Image
+                  src={"/images/couple.png"}
+                  fill
+                  alt="couple-image"
+                ></Image>
+              </div>
+              <div className="opacity-[0.16] absolute z-10 lg:w-[280px] lg:h-[280px] w-[300px] h-[300px]">
+                <Image
+                  src={"/images/fondo-circle.png"}
+                  fill
+                  alt="circle-image"
+                ></Image>
+              </div>
             </div>
 
             <div className="text-center">

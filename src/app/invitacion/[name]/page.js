@@ -23,7 +23,7 @@ const getGuesses = unstable_cache(
   },
   [],
   {
-    revalidate: 2000,
+    revalidate: 1000,
   }
 );
 
@@ -68,8 +68,6 @@ const InvitacionPage = async ({ params }) => {
           key="desc"
         ></meta>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="viewport" content="height=device-height, initial-scale=1" />
         <meta property="og:image" content="/images/couple.webp" />
       </Head>
       <section>

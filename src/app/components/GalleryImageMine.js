@@ -69,7 +69,7 @@ const ratios = [2.2, 3, 5, 5];
 
 export const GalleryImageMine = () => {
   return (
-    <div className="content-center lg:h-full lg:w-full h-[120vh]">
+    <div className="content-center lg:h-full lg:w-full h-[100vh]">
       <div className="m-auto">
         <div className="text-center animate-fade-left animate-once animate-duration-[4000ms]">
           <h1 className="font-dancingScript lg:text-5xl text-3xl lg:mb-6 mb-3 font-bold">
@@ -83,7 +83,6 @@ export const GalleryImageMine = () => {
             gap={4}
             growLimit={2}
             overlay={() => (
-              /* rosado #FDE9E9  #FDF8EC*/
               <div className="w-full h-full bg-gradient-to-r from-[#bb7171] to-[#dac491] overflow-hidden rounded-[14px] opacity-25"></div>
             )}
           />

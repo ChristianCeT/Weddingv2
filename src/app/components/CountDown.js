@@ -17,7 +17,7 @@ const CountDownComponent = () => {
     } else {
       return (
         <div>
-          <h2 className="text-2xl font-nametitle italic font-semibold mt-5">
+          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-5 mt-2">
             Falta
           </h2>
 

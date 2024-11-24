@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { DateHour } from "@/app/components/DateHour";
 import { GalleryImageMine } from "@/app/components/GalleryImageMine";
+import MapMarry2 from "@/app/components/MapMarry2";
 
 const getGuesses = unstable_cache(
   async () => {
@@ -49,7 +50,7 @@ const InvitacionPage = async ({ params }) => {
           "
           >
             <Image
-              src={"/images/pink-flower.png"}
+              src={"/images/pink-flower.webp"}
               fill
               alt="pink-flower-image"
             ></Image>
@@ -57,7 +58,7 @@ const InvitacionPage = async ({ params }) => {
 
           <div className="absolute md:left-[-96px] md:block hidden rotate-12">
             <Image
-              src={"/images/stain.png"}
+              src={"/images/stain.webp"}
               width={400}
               height={300}
               alt="stain-image"
@@ -66,7 +67,7 @@ const InvitacionPage = async ({ params }) => {
 
           <div className="absolute right-[-180px] top-[-80px] rotate-[-92deg] md:opacity-100 opacity-65 z-20">
             <Image
-              src={"/images/stain.png"}
+              src={"/images/stain.webp"}
               width={400}
               height={300}
               alt="stain-image"
@@ -75,7 +76,7 @@ const InvitacionPage = async ({ params }) => {
 
           <div className="h-full w-full flex flex-col justify-center items-center absolute px-8">
             <Image
-              src={"/images/rings.png"}
+              src={"/images/rings.webp"}
               width={100}
               height={100}
               alt="ring-image"
@@ -83,21 +84,21 @@ const InvitacionPage = async ({ params }) => {
             <h1 className="text-[2.3rem] font-dancingScript font-bold">
               Para: {guess.name}
             </h1>
-            <h1 className="text-[2.8rem] font-dancingScript font-bold text-center tracking-tighter leading-[3rem]">
+            <h1 className="lg:text-[2.8rem] text-3xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem]">
               ¡Estás invitado a mi boda!
             </h1>
 
             <div className="relative w-[400px] flex justify-center">
-              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[300px] h-[300px]">
+              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[240px] h-[240px]">
                 <Image
-                  src={"/images/couple.png"}
+                  src={"/images/couple.webp"}
                   fill
                   alt="couple-image"
                 ></Image>
               </div>
               <div className="opacity-[0.16] absolute z-10 lg:w-[280px] lg:h-[280px] w-[300px] h-[300px]">
                 <Image
-                  src={"/images/fondo-circle.png"}
+                  src={"/images/fondo-circle.webp"}
                   fill
                   alt="circle-image"
                 ></Image>
@@ -105,7 +106,7 @@ const InvitacionPage = async ({ params }) => {
             </div>
 
             <div className="text-center">
-              <p className="text-4xl font-nametitle italic font-semibold">
+              <p className="lg:text-4xl text-3xl font-nametitle italic font-semibold">
                 Tedoro & Nicida
               </p>
               <DateHour></DateHour>
@@ -120,21 +121,21 @@ const InvitacionPage = async ({ params }) => {
           "
           >
             <Image
-              src={"/images/pink-flowers2.png"}
+              src={"/images/pink-flowers2.webp"}
               fill
               alt="pink-flowers2"
             ></Image>
           </div>
           <Image
             className="absolute right-0 bottom-[-160px] md:block hidden rotate-12 z-20"
-            src={"/images/stain.png"}
+            src={"/images/stain.webp"}
             width={400}
             height={300}
             alt="stain-image"
           ></Image>
           <Image
             className="absolute  bottom-[-160px] left-0  md:opacity-100 opacity-40 rotate-[120deg] z-20"
-            src={"/images/stain.png"}
+            src={"/images/stain.webp"}
             width={400}
             height={300}
             alt="stain-image"
@@ -143,7 +144,7 @@ const InvitacionPage = async ({ params }) => {
       </section>
 
       <section>
-        <div className="relative h-screen w-[100vw - 2rem]">
+        <div className="relative lg:h-screen h-[120vh] w-[100vw - 2rem]">
           <Image
             src={"/images/fondo.webp"}
             fill
@@ -151,11 +152,31 @@ const InvitacionPage = async ({ params }) => {
             priority
           ></Image>
 
-          <div className="absolute h-full w-full">
+          <div className="absolute w-full lg:h-full lg:px-40 px-4">
             <GalleryImageMine></GalleryImageMine>
           </div>
         </div>
       </section>
+
+      <section>
+        <div className="relative lg:h-screen h-[120vh] w-[100vw - 2rem]">
+          <Image
+            src={"/images/fondo.webp"}
+            fill
+            alt="fondo-image"
+            priority
+          ></Image>
+
+          <div className="absolute w-full h-full lg:px-28 lg:pb-40 px-4">
+            {/* <MapMarry></MapMarry> */}
+            <MapMarry2></MapMarry2>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="text-center h-[30px]">By Christian 😊</div>
+      </footer>
     </div>
   );
 };

@@ -1,44 +1,92 @@
-"use client";
-
 import { Gallery } from "next-gallery";
 
 const images = [
   {
-    src: "/images/fotoprueba.webp",
-    aspect_ratio: 16 / 9,
+    src: "/images/3.webp",
+    aspect_ratio: 4 / 3,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+      },
+    },
   },
   {
-    src: "/images/fotoprueba.webp",
+    src: "/images/5.webp",
     aspect_ratio: 2 / 3,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+      },
+    },
   },
   {
-    src: "/images/fotoprueba.webp",
+    src: "/images/2.webp",
     aspect_ratio: 16 / 9,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+      },
+    },
   },
   {
-    src: "/images/fotoprueba.webp",
+    src: "/images/4.webp",
     aspect_ratio: 16 / 9,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+      },
+    },
   },
   {
-    src: "/images/fotoprueba.webp",
-    aspect_ratio: 16 / 9,
+    src: "/images/6.webp",
+    aspect_ratio: 4 / 3,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+        /* centrado la imagen */
+      },
+    },
+  },
+  {
+    src: "/images/1.webp",
+    aspect_ratio: 4 / 3,
+    nextImageProps: {
+      style: {
+        objectFit: "cover",
+        borderRadius: "15px",
+        /* centrado la imagen */
+      },
+    },
   },
 ];
-const widths = [700, 1000, 1800];
-const ratios = [2.2, 2, 4, 6];
+const widths = [200, 800, 1800];
+const ratios = [2.2, 3, 5, 5];
 
 export const GalleryImageMine = () => {
   return (
-    <div className="content-center h-full w-full">
-      <div className="m-auto px-7 py-10">
-        <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="font-dancingScript text-5xl mb-6">
-            Nuestro matrimonio Civil
+    <div className="content-center lg:h-full lg:w-full h-[120vh]">
+      <div className="m-auto">
+        <div className="text-center">
+          <h1 className="font-dancingScript lg:text-5xl text-3xl lg:mb-6 mb-3 font-bold">
+            Nuestro matrimonio Civil 💖
           </h1>
         </div>
 
-        <div className="">
-          <Gallery {...{ images, ratios, widths }} gap={4}></Gallery>
+        <div className="h-full w-full">
+          <Gallery
+            {...{ images, ratios, widths }}
+            gap={4}
+            growLimit={2}
+            overlay={() => (
+              /* rosado #FDE9E9  #FDF8EC*/
+              <div className="w-full h-full bg-gradient-to-r from-[#bb7171] to-[#dac491] overflow-hidden rounded-[14px] opacity-25"></div>
+            )}
+          />
         </div>
       </div>
     </div>

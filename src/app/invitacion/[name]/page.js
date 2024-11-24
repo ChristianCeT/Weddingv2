@@ -19,6 +19,8 @@ const getGuesses = unstable_cache(
 
     if (error) return;
 
+    console.log(guess);
+
     return guess;
   },
   [],
@@ -26,6 +28,9 @@ const getGuesses = unstable_cache(
     revalidate: 1000,
   }
 );
+
+export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({ params }) {
   const guesses = await getGuesses(); // Obtén las conjeturas desde la base de datos

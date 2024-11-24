@@ -27,6 +27,29 @@ const getGuesses = unstable_cache(
   }
 );
 
+export async function generateMetadata({ params }) {
+  const guesses = await getGuesses(); // Obtén las conjeturas desde la base de datos
+  const { name } = await params; // Accede a 'name' desde params
+
+  // Buscar el invitado
+  const guess = guesses.find((gb) => gb.name === name);
+
+  // Si no se encuentra el invitado, usa un título genérico
+  if (!guess) {
+    return {
+      title: "Invitación no encontrada",
+      description: "La invitación que buscas no está disponible.",
+    };
+  }
+
+  // Si se encuentra el invitado, genera el título dinámico
+  return {
+    title: `Invitación de Boda para ${guess.name}`, // Título dinámico con el nombre del invitado
+    description: `Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉`,
+    image: "/images/couple.webp", // Imagen predeterminada
+  };
+}
+
 const InvitacionPage = async ({ params }) => {
   const guesses = await getGuesses();
   const { name } = await params;

@@ -11,10 +11,10 @@ const geistMono = localFont({
   weight: "100 900",
 }); */
 
-export const metadata = {
+/* export const metadata = {
   title: "Matrimonio",
   description: "Matrimonio by Christian Cervantes",
-};
+}; */
 
 export default function RootLayout({ children }) {
   return (

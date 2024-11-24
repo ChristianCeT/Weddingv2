@@ -6,6 +6,7 @@ import Image from "next/image";
 import { DateHour } from "@/app/components/DateHour";
 import { GalleryImageMine } from "@/app/components/GalleryImageMine";
 import MapMarry2 from "@/app/components/MapMarry2";
+import Head from "next/head";
 
 const getGuesses = unstable_cache(
   async () => {
@@ -36,6 +37,15 @@ const InvitacionPage = async ({ params }) => {
 
   return (
     <div>
+      <Head>
+        <title>Invitación de Boda para {guess.name}</title>
+        <meta
+          name="description"
+          content="Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉"
+          key="desc"
+        ></meta>
+        <meta property="og:image" content="/images/couple.webp" />
+      </Head>
       <section>
         <div className="relative h-screen overflow-hidden">
           <Image

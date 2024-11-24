@@ -17,11 +17,11 @@ const CountDownComponent = () => {
     } else {
       return (
         <div>
-          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-5 mt-2">
+          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-5 mt-2 animate-fade-left animate-duration-[3000ms]">
             Falta
           </h2>
 
-          <div className="flex flex-col text-2xl font-dancingScript font-semibold">
+          <div className="flex flex-col text-2xl font-dancingScript font-semibold animate-fade animate-duration-[4000ms]">
             <span>
               {days} días {hours} horas {minutes} minutos
             </span>

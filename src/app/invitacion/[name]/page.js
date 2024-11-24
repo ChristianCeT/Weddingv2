@@ -46,8 +46,7 @@ const InvitacionPage = async ({ params }) => {
           ></Image>
           <div
             className="absolute lg:left-[-96px] left-[-60px] rotate-12
-          h-[200px] w-[200px] lg:h-[300px] lg:w-[300px]
-          "
+          h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] "
           >
             <Image
               src={"/images/pink-flower.webp"}
@@ -56,7 +55,7 @@ const InvitacionPage = async ({ params }) => {
             ></Image>
           </div>
 
-          <div className="absolute md:left-[-96px] md:block hidden rotate-12">
+          <div className="absolute md:left-[-96px] md:block hidden rotate-12 animate-pulse animate-infinite animate-duration-[5000ms]">
             <Image
               src={"/images/stain.webp"}
               width={400}
@@ -65,7 +64,7 @@ const InvitacionPage = async ({ params }) => {
             ></Image>
           </div>
 
-          <div className="absolute right-[-180px] top-[-80px] rotate-[-92deg] md:opacity-100 opacity-65 z-20">
+          <div className="absolute right-[-180px] top-[-80px] rotate-[-92deg] md:opacity-100 opacity-65 z-20 animate-pulse animate-infinite animate-duration-[5000ms]">
             <Image
               src={"/images/stain.webp"}
               width={400}
@@ -74,22 +73,27 @@ const InvitacionPage = async ({ params }) => {
             ></Image>
           </div>
 
-          <div className="h-full w-full flex flex-col justify-center items-center absolute px-8">
-            <Image
-              src={"/images/rings.webp"}
-              width={100}
-              height={100}
-              alt="ring-image"
-            ></Image>
-            <h1 className="text-[2.3rem] font-dancingScript font-bold">
+          <div className="h-full w-full flex flex-col justify-center items-center absolute px-8 py-10">
+            <div className="animate-wiggle-more animate-infinite animate-duration-[5000ms]">
+              <Image
+                src={"/images/rings.webp"}
+                width={100}
+                height={100}
+                alt="ring-image"
+              ></Image>
+            </div>
+            <h1 className="md:text-[1.8rem] lg:text-[2.3rem] text-[2.3rem] font-dancingScript font-bold animate-fade-right animate-once animate-duration-[4000ms]">
               Para: {guess.name}
             </h1>
-            <h1 className="lg:text-[2.8rem] text-3xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem]">
+            <h1
+              className="lg:text-[2.8rem] text-3xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem] 
+            animate-fade-left animate-once animate-duration-[4000ms] mt-[-5px]"
+            >
               ¡Estás invitado a mi boda!
             </h1>
 
             <div className="relative w-[400px] flex justify-center">
-              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[240px] h-[240px]">
+              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[240px] h-[240px] animate-fade-up animate-ease-linear">
                 <Image
                   src={"/images/couple.webp"}
                   fill
@@ -106,7 +110,7 @@ const InvitacionPage = async ({ params }) => {
             </div>
 
             <div className="text-center">
-              <p className="lg:text-4xl text-3xl font-nametitle italic font-semibold">
+              <p className="lg:text-4xl text-3xl font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
                 Tedoro & Nicida
               </p>
               <DateHour></DateHour>
@@ -116,9 +120,7 @@ const InvitacionPage = async ({ params }) => {
 
           <div
             className="absolute right-[-10px] lg:bottom-[-40px] lg:rotate-[-40deg] rotate-[-20deg]
-            bottom-[-20px]
-          lg:h-[400px] lg:w-[200px] z-20 w-[80px] h-[180px]
-          "
+            bottom-[-20px] lg:h-[400px] lg:w-[200px] z-20 w-[80px] h-[180px] animate-fade animate-ease-linear"
           >
             <Image
               src={"/images/pink-flowers2.webp"}
@@ -127,14 +129,14 @@ const InvitacionPage = async ({ params }) => {
             ></Image>
           </div>
           <Image
-            className="absolute right-0 bottom-[-160px] md:block hidden rotate-12 z-20"
+            className="absolute right-0 bottom-[-160px] md:block hidden rotate-12 z-20 animate-pulse animate-infinite animate-duration-[5000ms]"
             src={"/images/stain.webp"}
             width={400}
             height={300}
             alt="stain-image"
           ></Image>
           <Image
-            className="absolute  bottom-[-160px] left-0  md:opacity-100 opacity-40 rotate-[120deg] z-20"
+            className="absolute bottom-[-160px] left-0 md:opacity-100 opacity-40 rotate-[120deg] z-20 animate-pulse animate-infinite animate-duration-[5000ms]"
             src={"/images/stain.webp"}
             width={400}
             height={300}
@@ -144,7 +146,7 @@ const InvitacionPage = async ({ params }) => {
       </section>
 
       <section>
-        <div className="relative lg:h-screen h-[120vh] w-[100vw - 2rem]">
+        <div className="relative lg:h-screen h-[120vh] w-[100vw-2rem]">
           <Image
             src={"/images/fondo.webp"}
             fill
@@ -168,14 +170,17 @@ const InvitacionPage = async ({ params }) => {
           ></Image>
 
           <div className="absolute w-full h-full lg:px-28 lg:pb-40 px-4">
-            {/* <MapMarry></MapMarry> */}
             <MapMarry2></MapMarry2>
           </div>
         </div>
       </section>
 
       <footer>
-        <div className="text-center h-[30px]">By Christian 😊</div>
+        <div className="bg-black w-full h-[1px]"></div>
+        <div className="text-center h-[30px] bg-gradient-to-r from-[#fff0f0] to-[#fcf3de] font-nametitle italic">
+          {/*Simbolo  Copyright */}
+          By Christian 😊
+        </div>
       </footer>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 export const DateHour = () => {
   return (
-    <div className="lg:mt-4 mt-2">
+    <div className="lg:mt-4 mt-2 animate-fade-right animate-duration-[3000ms]">
       <div className="flex justify-center items-center">
         <p className="text-3xl font-dancingScript font-bold mr-2">
           7 de diciembre del

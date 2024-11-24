@@ -81,18 +81,21 @@ const MapMarry2 = () => {
         </div>
 
         <div
-          className="flex flex-col items-center lg:justify-center lg:w-[50%] h-full 
+          className="flex flex-col items-center lg:justify-center lg:w-[50%] h-full justify-center
         lg:mt-0 mt-5 font-nametitle italic text-base font-semibold"
         >
           <div className="text-center">
             <h1 className="text-2xl">Dirección</h1>
-            <h1>Av. Villa María, Villa María del Triunfo 15817</h1>
+            <h1>Av. 26 de Noviembre, Paradero 4, Nueva Esperanza, VMT.</h1>
           </div>
           <div
             id="map"
             className="lg:h-[380px] lg:w-[75%] w-[100%] h-[250px] mt-3 rounded-xl overflow-hidden lg:mb-0"
           ></div>
         </div>
+      </div>
+      <div className="text-center md:mt-6 font-semibold text-3xl">
+        ¡Te esperamos! 🙂
       </div>
     </div>
   );

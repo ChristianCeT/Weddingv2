@@ -13,15 +13,15 @@ const CountDownComponent = () => {
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <span>Event Started</span>;
+      return <span>El evento inició</span>;
     } else {
       return (
-        <div>
-          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-5 mt-2 animate-fade-left animate-duration-[3000ms]">
-            Falta
+        <div className="flex items-center justify-center lg:flex-row flex-col">
+          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-0 mt-2 animate-fade-left animate-duration-[3000ms]">
+            Falta:{" "}
           </h2>
 
-          <div className="flex flex-col text-2xl font-dancingScript font-semibold animate-fade animate-duration-[4000ms]">
+          <div className="flex lg:flex-row flex-col lg:text-2xl text-[1.32rem] font-dancingScript font-extrabold animate-fade animate-duration-[4000ms]">
             <span>
               {days} días {hours} horas {minutes} minutos
             </span>

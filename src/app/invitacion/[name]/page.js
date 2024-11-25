@@ -7,6 +7,7 @@ import { DateHour } from "@/app/components/DateHour";
 import { GalleryImageMine } from "@/app/components/GalleryImageMine";
 import MapMarry2 from "@/app/components/MapMarry2";
 import Head from "next/head";
+import LastTextMessage from "@/app/components/LastTextMessage";
 
 const getGuesses = unstable_cache(
   async () => {
@@ -18,8 +19,6 @@ const getGuesses = unstable_cache(
     const { data: guess, error } = await supabase.from("guess").select("*");
 
     if (error) return;
-
-    console.log(guess);
 
     return guess;
   },
@@ -49,11 +48,22 @@ export async function generateMetadata({ params }) {
 
   // Si se encuentra el invitado, genera el título dinámico
   return {
-    title: `Invitación de Boda para ${guess.name}`, // Título dinámico con el nombre del invitado
+    title: `Invitación de boda para ${
+      guess.name[0].toUpperCase() + guess.name.slice(1)
+    }`, // Título dinámico con el nombre del invitado
     description: `Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉`,
     image: "/images/couple.webp", // Imagen predeterminada
   };
 }
+
+const removeNumberFromName = (name, lastname) => {
+  const formatName = (nameformat) => nameformat.replace(/\d+/g, ""); // Elimina números
+  const firstName = name ? formatName(name) : "";
+  const lastName = lastname ? formatName(lastname) : "";
+  return `${firstName[0].toUpperCase() + firstName.slice(1)} ${
+    lastName ? lastName[0].toUpperCase() + lastName.slice(1) : ""
+  }`;
+};
 
 const InvitacionPage = async ({ params }) => {
   const guesses = await getGuesses();
@@ -66,7 +76,10 @@ const InvitacionPage = async ({ params }) => {
   return (
     <div>
       <Head>
-        <title>Invitación de Boda para {guess.name}</title>
+        <title>
+          Invitación de Boda para{" "}
+          {removeNumberFromName(guess.name, guess.lastname)}
+        </title>
         <meta
           name="description"
           content="Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉"
@@ -85,7 +98,7 @@ const InvitacionPage = async ({ params }) => {
           ></Image>
           <div
             className="absolute lg:left-[-96px] left-[-60px] rotate-12
-          h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] "
+          h-[200px] w-[200px] lg:h-[300px] lg:w-[300px]"
           >
             <Image
               src={"/images/pink-flower.webp"}
@@ -121,18 +134,18 @@ const InvitacionPage = async ({ params }) => {
                 alt="ring-image"
               ></Image>
             </div>
-            <h1 className="md:text-[1.8rem] lg:text-[2.3rem] text-[2.3rem] font-dancingScript font-bold animate-fade-right animate-once animate-duration-[4000ms]">
-              Para: {guess.name}
+            <h1 className="lg:text-[2rem] text-[1.8rem] font-dancingScript font-bold animate-fade-right animate-once animate-duration-[4000ms]">
+              Para: {removeNumberFromName(guess.name, guess.lastname)}
             </h1>
             <h1
-              className="lg:text-[2.8rem] text-3xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem] 
-            animate-fade-left animate-once animate-duration-[4000ms] mt-[-5px]"
+              className="text-4xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem] 
+            animate-fade-left animate-once animate-duration-[4000ms] mt-[-6px]"
             >
               ¡Estás invitado a mi boda!
             </h1>
 
             <div className="relative w-[400px] flex justify-center">
-              <div className="relative z-20 lg:w-[280px] lg:h-[280px] w-[240px] h-[240px] animate-fade-up animate-ease-linear">
+              <div className="relative z-20 lg:w-[270px] lg:h-[270px] w-[230px] h-[230px] animate-fade-up animate-ease-linear">
                 <Image
                   src={"/images/couple.webp"}
                   fill
@@ -149,7 +162,7 @@ const InvitacionPage = async ({ params }) => {
             </div>
 
             <div className="text-center">
-              <p className="lg:text-4xl text-3xl font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
+              <p className="text-3xl font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
                 Tedoro & Nicida
               </p>
               <DateHour></DateHour>
@@ -214,10 +227,23 @@ const InvitacionPage = async ({ params }) => {
         </div>
       </section>
 
+      <section>
+        <div className="relative h-screen w-[100vw-2rem]">
+          <Image
+            src={"/images/fondo.webp"}
+            fill
+            alt="fondo-image"
+            priority
+          ></Image>
+          <div className="absolute w-full h-full">
+            <LastTextMessage></LastTextMessage>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <div className="bg-black w-full h-[1px]"></div>
         <div className="text-center h-[30px] bg-gradient-to-r from-[#fff0f0] to-[#fcf3de] font-nametitle italic">
-          {/*Simbolo  Copyright */}
           By Christian 😊
         </div>
       </footer>

@@ -94,9 +94,6 @@ const MapMarry2 = () => {
           ></div>
         </div>
       </div>
-      <div className="text-center md:mt-6 font-semibold text-3xl">
-        ¡Te esperamos! 🙂
-      </div>
     </div>
   );
 };

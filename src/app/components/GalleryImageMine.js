@@ -69,7 +69,7 @@ const ratios = [2.2, 3, 5, 5];
 
 export const GalleryImageMine = () => {
   return (
-    <div className="content-center lg:h-full lg:w-full h-[100vh]">
+    <div className="content-center lg:h-full lg:w-full">
       <div className="m-auto">
         <div className="text-center animate-fade-left animate-once animate-duration-[4000ms]">
           <h1 className="font-dancingScript lg:text-5xl text-3xl lg:mb-6 mb-3 font-bold">

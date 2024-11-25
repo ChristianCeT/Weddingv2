@@ -31,6 +31,15 @@ const getGuesses = unstable_cache(
 export const dynamic = "force-dynamic";
 export const revalidate = 300;
 
+const removeNumberFromName = (name, lastname) => {
+  const formatName = (nameformat) => nameformat.replace(/\d+/g, ""); // Elimina números
+  const firstName = name ? formatName(name) : "";
+  const lastName = lastname ? formatName(lastname) : "";
+  return `${firstName[0].toUpperCase() + firstName.slice(1)} ${
+    lastName ? lastName[0].toUpperCase() + lastName.slice(1) : ""
+  }`;
+};
+
 export async function generateMetadata({ params }) {
   const guesses = await getGuesses(); // Obtén las conjeturas desde la base de datos
   const { name } = await params; // Accede a 'name' desde params
@@ -48,22 +57,14 @@ export async function generateMetadata({ params }) {
 
   // Si se encuentra el invitado, genera el título dinámico
   return {
-    title: `Invitación de boda para ${
-      guess.name[0].toUpperCase() + guess.name.slice(1)
-    }`, // Título dinámico con el nombre del invitado
+    title: `Invitación de boda para ${removeNumberFromName(
+      guess.name,
+      guess.lastname
+    )}`, // Título dinámico con el nombre del invitado
     description: `Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉`,
     image: "/images/couple.webp", // Imagen predeterminada
   };
 }
-
-const removeNumberFromName = (name, lastname) => {
-  const formatName = (nameformat) => nameformat.replace(/\d+/g, ""); // Elimina números
-  const firstName = name ? formatName(name) : "";
-  const lastName = lastname ? formatName(lastname) : "";
-  return `${firstName[0].toUpperCase() + firstName.slice(1)} ${
-    lastName ? lastName[0].toUpperCase() + lastName.slice(1) : ""
-  }`;
-};
 
 const InvitacionPage = async ({ params }) => {
   const guesses = await getGuesses();
@@ -77,7 +78,7 @@ const InvitacionPage = async ({ params }) => {
     <div>
       <Head>
         <title>
-          Invitación de Boda para{" "}
+          Invitación de boda para{" "}
           {removeNumberFromName(guess.name, guess.lastname)}
         </title>
         <meta

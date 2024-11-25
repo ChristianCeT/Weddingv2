@@ -10,20 +10,27 @@ const LastTextMessage = () => {
         hace que este día sea aún más significativo. Les damos la más cálida
         bienvenida a este espacio donde juntos crearemos recuerdos inolvidables.
         Que esta celebración sea un recordatorio de que el amor, la alegría y
-        los sueños compartidos siempre triunfan. ¡Gracias por acompañarnos en
-        este hermoso comienzo de nuestra historia como pareja! 💍🌿 con cariño,
+        los sueños compartidos siempre triunfan.{" "}
+        <span className="text-[#645d34]">
+          ¡Gracias por acompañarnos en este hermoso comienzo de nuestra historia
+          como pareja! 💍🌿 con cariño,
+        </span>
       </div>
 
       <div className="text-center mt-5">
-        <div className="font-nametitle font-semibold">
-          Luego de la ceremonia, acercate a:
+        <div className="font-nametitle font-semibold text-[#645d34]">
+          Luego de la ceremonia, acercarse a:
         </div>
-        <div>Av.Quillabamba, Paradero 10, Nueva Esperanza, VMT.</div>
+        <div className="font-nametitle font-semibold text-[0.9rem]">
+          Av.Quillabamba, Paradero 10, Nueva Esperanza, VMT.
+        </div>
       </div>
 
       <div className="text-center mt-3">
-        <div className="font-nametitle font-semibold">¡Te esperamos!</div>
-        <div className="font-nametitle italic font-extrabold text-lg">
+        <div className="font-nametitle font-semibold text-2xl">
+          ¡Te esperamos!
+        </div>
+        <div className="font-nametitle italic font-extrabold text-lg text-[#645d34]">
           Nicida Tanta & Teodoro Cervantes
         </div>
       </div>

@@ -17,7 +17,7 @@ const CountDownComponent = () => {
     } else {
       return (
         <div className="flex items-center justify-center lg:flex-row flex-col">
-          <h2 className="text-2xl font-nametitle italic font-semibold lg:mt-0 mt-2 animate-fade-left animate-duration-[3000ms]">
+          <h2 className="text-2xl text-[#645d34] font-nametitle italic font-semibold lg:mt-0 mt-2 animate-fade-left animate-duration-[3000ms]">
             Falta:{" "}
           </h2>
 

@@ -136,7 +136,10 @@ const InvitacionPage = async ({ params }) => {
               ></Image>
             </div>
             <h1 className="lg:text-[2rem] text-[1.8rem] font-dancingScript font-bold animate-fade-right animate-once animate-duration-[4000ms]">
-              Para: {removeNumberFromName(guess.name, guess.lastname)}
+              Para:{" "}
+              <span className="text-[#817844]">
+                {removeNumberFromName(guess.name, guess.lastname)}
+              </span>
             </h1>
             <h1
               className="text-4xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem] 
@@ -163,7 +166,7 @@ const InvitacionPage = async ({ params }) => {
             </div>
 
             <div className="text-center">
-              <p className="text-3xl font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
+              <p className="text-3xl text-[#645d34] font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
                 Tedoro & Nicida
               </p>
               <DateHour></DateHour>
@@ -244,7 +247,7 @@ const InvitacionPage = async ({ params }) => {
 
       <footer>
         <div className="bg-black w-full h-[1px]"></div>
-        <div className="text-center h-[30px] bg-gradient-to-r from-[#fff0f0] to-[#fcf3de] font-nametitle italic">
+        <div className="text-center h-[30px] bg-gradient-to-r from-[#fff0f0] to-[#fcf3de] font-nametitle italic text-[#645d34] font-bold">
           By Christian 😊
         </div>
       </footer>

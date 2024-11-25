@@ -68,8 +68,8 @@ const MapMarry2 = () => {
           className="flex flex-col items-center lg:justify-center lg:w-[50%]
         font-nametitle italic text-base font-semibold"
         >
-          <h1 className="text-2xl">Iglesia</h1>
-          <h1>"Nuestra Señora de la Esperanza"</h1>
+          <h1 className="text-2xl ">Iglesia</h1>
+          <h1 className="text-[#645d34]">"Nuestra Señora de la Esperanza"</h1>
           <div className="rounded-xl overflow-hidden object-cover mt-3">
             <Image
               src={"/images/parroquia.webp"}
@@ -86,7 +86,9 @@ const MapMarry2 = () => {
         >
           <div className="text-center">
             <h1 className="text-2xl">Dirección</h1>
-            <h1>Av. 26 de Noviembre, Paradero 4, Nueva Esperanza, VMT.</h1>
+            <h1 className="text-[#645d34]">
+              Av. 26 de Noviembre, Paradero 4, Nueva Esperanza, VMT.
+            </h1>
           </div>
           <div
             id="map"

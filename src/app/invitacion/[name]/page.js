@@ -79,7 +79,7 @@ const InvitacionPage = async ({ params }) => {
       <Head>
         <title>
           Invitación de boda para{" "}
-          {removeNumberFromName(guess.name, guess.lastname)}
+          {removeNumberFromName(guess.name, guess.lastname)} & familia
         </title>
         <meta
           name="description"
@@ -135,12 +135,13 @@ const InvitacionPage = async ({ params }) => {
                 alt="ring-image"
               ></Image>
             </div>
-            <h1 className="lg:text-[2rem] text-[1.8rem] font-dancingScript font-bold animate-fade-right animate-once animate-duration-[4000ms]">
-              Para:{" "}
+            <div className="flex lg:flex-row flex-col lg:text-[2rem] text-center text-[1.8rem] font-dancingScript font-extrabold animate-fade-right animate-once animate-duration-[4000ms]">
+              <h1 className="lg:mb-0 mb-[-8px] lg:mr-1 mr-0">Para: </h1>
               <span className="text-[#817844]">
-                {removeNumberFromName(guess.name, guess.lastname)}
+                {removeNumberFromName(guess.name, guess.lastname)} & familia
               </span>
-            </h1>
+            </div>
+
             <h1
               className="text-4xl font-dancingScript font-bold text-center tracking-tighter leading-[3rem] 
             animate-fade-left animate-once animate-duration-[4000ms] mt-[-6px]"

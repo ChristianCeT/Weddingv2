@@ -22,7 +22,7 @@ const LastTextMessage = () => {
           Luego de la ceremonia, acercarse a:
         </div>
         <div className="font-nametitle font-semibold text-[0.9rem]">
-          Av.Quillabamba 210, Paradero 10, Nueva Esperanza, VMT.
+          Jr.Quillabamba #210, Paradero 10, Nueva Esperanza, VMT.
         </div>
       </div>
 

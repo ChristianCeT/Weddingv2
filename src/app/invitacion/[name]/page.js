@@ -61,7 +61,7 @@ export async function generateMetadata({ params }) {
       guess.name,
       guess.lastname
     )}`, // Título dinámico con el nombre del invitado
-    description: `Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉`,
+    description: `Invitación de boda de Teodoro y Nicida por Christian Cervantes 🎉`,
     image: "/images/couple.webp", // Imagen predeterminada
   };
 }
@@ -83,7 +83,7 @@ const InvitacionPage = async ({ params }) => {
         </title>
         <meta
           name="description"
-          content="Invitación de boda de Tedoro y Nicida por Christian Cervantes 🎉"
+          content="Invitación de boda de Teodoro y Nicida por Christian Cervantes 🎉"
           key="desc"
         ></meta>
         <meta charset="utf-8" />
@@ -167,7 +167,7 @@ const InvitacionPage = async ({ params }) => {
 
             <div className="text-center">
               <p className="text-3xl text-[#645d34] font-nametitle italic font-semibold animate-fade-left animate-duration-[3000ms]">
-                Tedoro & Nicida
+                Teodoro & Nicida
               </p>
               <DateHour></DateHour>
               <CountDownComponent />

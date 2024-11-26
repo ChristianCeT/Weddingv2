@@ -10,7 +10,7 @@ export const DateHour = () => {
         <p className="text-2xl font-dancingScript font-bold">2024</p>
       </div>
       <p className="text-[1.4rem] font-nametitle italic font-semibold text-[#645d34]">
-        8:30 pm
+        7:30 pm
       </p>
     </div>
   );

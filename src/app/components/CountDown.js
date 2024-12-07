@@ -9,7 +9,7 @@ const CountDownComponent = () => {
     setLoad(true);
   }, []);
 
-  const date = new Date(2024, 11, 7, 6, 30);
+  const date = new Date(2024, 11, 7, 19, 30);
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
